@@ -1,0 +1,56 @@
+body{
+    background-color: rgb(220,210,200);
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+#div1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 600px;
+    height: 700px;
+    background-color: white;
+    border-radius: 35px;
+    filter: drop-shadow(30px -30px 35px rgb(0,0,0,0.2));
+    transition: all 0.4s ease;
+    animation: float 3s ease-in-out infinite;
+}
+#div1:hover{
+    filter: drop-shadow(-30px 30px 35px rgb(0,0,0,0.2));
+    width: 650px;
+    height: 750px;
+    animation-play-state: paused;
+}
+@keyframes float {
+    0% { transform: translate(-50%, -55%); }
+    50% { transform: translate(-50%, -45%); }
+    100% { transform: translate(-50%, -55%); }
+}
+#text1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 200;
+    font-size: 40px;
+    transition: all 0.4s ease;
+    white-space: nowrap;
+}
+#div1:hover #text1{
+    opacity: 0;
+}
+#text2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    font-weight: 200;
+    font-size: 40px;
+    transition: all 0.4s ease;
+    white-space: nowrap;
+    opacity: 0;
+}
