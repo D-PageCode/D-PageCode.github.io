@@ -29,14 +29,3 @@ div1.addEventListener('mouseleave', () => {
         timer = null;
     }, 400);
 });
-let fakeEventCounter = 0;
-const idPrinter = setInterval(() => {
-    fakeEventCounter++;
-    if (fakeEventCounter % 2 === 1) {
-        div1.dispatchEvent(new Event('mouseenter'));
-        console.log(timer);
-    } else {
-        div1.dispatchEvent(new Event('mouseleave'));
-        console.log(timer);
-    }
-},1000000);
